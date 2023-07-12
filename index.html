@@ -51,6 +51,7 @@
 <!-- Slider main container -->
 <div class="swiper">
   <!-- Additional required wrapper -->
+  <!-- If we need pagination -->
   <div class="swiper-wrapper">
     <!-- Slides -->
     <div class="swiper-slide"><img src="imagens/ApacheKafka.svg" alt="Livro sobre apache kafka e spring boot da alura books."></div>
@@ -58,7 +59,7 @@
     <div class="swiper-slide"><img src="imagens/Javascript.svg" alt="Livro sobre javascript assertivo da alura books"></div>
     <div class="swiper-slide"><img src="imagens/Guia Front-end.svg" alt="Livro sobre Front-end"></div>
     <div class="swiper-slide"><img src="imagens/Portugol.svg" alt="Livro sobre portugol"></div>
-    <div class="swiper-slide"><img src="imagens/acessibilidade.png" alt="Livro sobre acessibilidade"></div>
+    <div class="swiper-slide"><img src="imagens/Acessibilidade.svg" alt="Livro sobre acessibilidade"></div>
   </div>
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
@@ -82,8 +83,19 @@
         <p class="descrição_texto">Construindo uma aplicação integrada com a plataforma do Google.</p>
     </div>
     <!-- 2 coluna -->
-    <img src="imagens/Angular.png" class="descrição_imagem" alt="">
+    <img src="imagens/Angular.svg" class="descrição_imagem" alt="">
 </div>
+
+ <!-- 2 linha -->
+ <div class="card_botões">
+    <!-- 1 coluna -->
+    <ul class="botões">
+        <li class="botões_item"><img src="imagens/Favoritos.svg" alt="Favoritar livro"></li>
+        <li class="botões_item"><img src="imagens/Compras.svg" alt="Adicionar no carrinho"></li>
+    </ul>
+    <!-- 2 coluna -->
+    <a href="#" class="botões_ancora">Saiba mais</a>
+ </div>
 </div>
 </section>
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
@@ -91,6 +103,10 @@
     const swiper = new Swiper('.swiper', {
         spaceBetween: 10,
         slidesPerView: 3,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+        }
     });
 </script>
     
